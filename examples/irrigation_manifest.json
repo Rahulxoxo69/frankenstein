@@ -1,0 +1,449 @@
+{
+  "schema_version": "0.1.0",
+  "bundle_id": "bundle_irrigation_demo_2026_06_20",
+  "detected_at": "2026-06-20T12:23:16.478985Z",
+  "parts": [
+    {
+      "schema_version": "0.1.0",
+      "part_id": "esp32_01",
+      "name": "ESP32-WROOM-32",
+      "status": "functional",
+      "confidence": 0.97,
+      "source": "vault",
+      "specs": {
+        "voltage": "3.3V",
+        "voltage_min": 3.0,
+        "voltage_max": 3.6,
+        "current_ma": 240.0,
+        "io_voltage": "3.3V",
+        "pinout": {
+          "3V3": "module supply (3.3V)",
+          "GPIO4": "DHT22 data",
+          "GPIO34": "soil moisture ADC",
+          "GPIO5": "relay IN1",
+          "GPIO2": "status LED",
+          "VIN": "5V input to onboard LDO",
+          "GND": "common ground"
+        },
+        "package": "SMD-module",
+        "dimensions_mm": null,
+        "datasheet_url": "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf",
+        "alternate_names": [
+          "ESP32",
+          "WROOM-32",
+          "ESP32-WROOM"
+        ],
+        "source": "nexar",
+        "confidence": 0.95
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478759Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_esp32_wroom_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "dht22_01",
+      "name": "DHT22",
+      "status": "functional",
+      "confidence": 0.91,
+      "source": "photo",
+      "specs": {
+        "voltage": "3.3V",
+        "voltage_min": 3.0,
+        "voltage_max": 5.5,
+        "current_ma": 2.5,
+        "io_voltage": "3.3V",
+        "pinout": {
+          "1": "VCC",
+          "2": "DATA",
+          "3": "NC",
+          "4": "GND"
+        },
+        "package": "through-hole-4pin",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [
+          "AM2302",
+          "RHT03"
+        ],
+        "source": "datasheet",
+        "confidence": 0.92
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478795Z",
+      "photo_id": "photo_intake_2026_06_20_01",
+      "vault_entry_id": null,
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "soil_moisture_01",
+      "name": "Capacitive Soil Moisture Sensor v1.2",
+      "status": "functional",
+      "confidence": 0.84,
+      "source": "photo",
+      "specs": {
+        "voltage": "3.3V",
+        "voltage_min": 3.3,
+        "voltage_max": 5.5,
+        "current_ma": 5.0,
+        "io_voltage": "3.3V",
+        "pinout": {
+          "VCC": "3.3V",
+          "GND": "ground",
+          "AOUT": "analog output 0-3V"
+        },
+        "package": "PCB-probe",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [
+          "capacitive moisture sensor",
+          "soil hygrometer"
+        ],
+        "source": "datasheet",
+        "confidence": 0.8
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478807Z",
+      "photo_id": "photo_intake_2026_06_20_01",
+      "vault_entry_id": null,
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "relay_5v_01",
+      "name": "5V Single-Channel Relay Module",
+      "status": "repairable",
+      "confidence": 0.88,
+      "source": "photo",
+      "specs": {
+        "voltage": "5V",
+        "voltage_min": 4.75,
+        "voltage_max": 5.25,
+        "current_ma": 70.0,
+        "io_voltage": "5V",
+        "pinout": {
+          "VCC": "5V",
+          "GND": "ground",
+          "IN": "logic input (active LOW)"
+        },
+        "package": "PCB-module",
+        "dimensions_mm": null,
+        "datasheet_url": "https://www.handsontec.com/dataspecs/relay/5V-relay-module.pdf",
+        "alternate_names": [],
+        "source": "inferred",
+        "confidence": 0.7
+      },
+      "repair_note": "Pin 3 (IN) is bent at ~30 degrees from normal. Straighten with needle-nose pliers before insertion; verify continuity with a multimeter. Optocoupler side appears undamaged. Once straightened, the part is fully functional — design can assume post-repair state.",
+      "detected_at": "2026-06-20T12:23:16.478822Z",
+      "photo_id": "photo_intake_2026_06_20_01",
+      "vault_entry_id": null,
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "pump_12v_01",
+      "name": "12V DC Submersible Water Pump",
+      "status": "unsafe",
+      "confidence": 0.93,
+      "source": "photo",
+      "specs": {
+        "voltage": "12V",
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": 400.0,
+        "io_voltage": null,
+        "pinout": null,
+        "package": null,
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "inferred",
+        "confidence": 0.6
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478831Z",
+      "photo_id": "photo_intake_2026_06_20_01",
+      "vault_entry_id": null,
+      "disposal_reason": "Housing has visible crack near the cable gland. Even if motor functions, water ingress is likely. Do not reuse for irrigation — route to e-waste per India E-Waste Rules 2022 Schedule I cat. 4."
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "reg_7805_01",
+      "name": "7805 Voltage Regulator (suspected)",
+      "status": "functional",
+      "confidence": 0.52,
+      "source": "photo",
+      "specs": {
+        "voltage": "5V",
+        "voltage_min": 7.0,
+        "voltage_max": 35.0,
+        "current_ma": 1000.0,
+        "io_voltage": null,
+        "pinout": {
+          "1": "INPUT",
+          "2": "GND",
+          "3": "OUTPUT"
+        },
+        "package": "TO-220",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [
+          "L7805",
+          "LM7805"
+        ],
+        "source": "inferred",
+        "confidence": 0.45
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478842Z",
+      "photo_id": "photo_intake_2026_06_20_01",
+      "vault_entry_id": null,
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "led_indicator_01",
+      "name": "3mm Green LED",
+      "status": "functional",
+      "confidence": 0.99,
+      "source": "vault",
+      "specs": {
+        "voltage": "2.1V Vf",
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": 20.0,
+        "io_voltage": null,
+        "pinout": {
+          "A": "anode",
+          "K": "cathode"
+        },
+        "package": "through-hole-3mm",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [
+          "green LED",
+          "L-7113GD"
+        ],
+        "source": "measured",
+        "confidence": 0.98
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478907Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_led_3mm_green_042",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "resistor_pack_01",
+      "name": "1/4W Carbon Film Resistor Assortment",
+      "status": "functional",
+      "confidence": 1.0,
+      "source": "vault",
+      "specs": {
+        "voltage": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": null,
+        "io_voltage": null,
+        "pinout": null,
+        "package": "through-hole-axial",
+        "dimensions_mm": {
+          "length": 6.3,
+          "diameter": 2.3
+        },
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "measured",
+        "confidence": 1.0
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478920Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_resistors_1_4w_1206",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "lvl_shift_01",
+      "name": "TXS0108E 8-bit Bidirectional Level Shifter",
+      "status": "functional",
+      "confidence": 0.93,
+      "source": "vault",
+      "specs": {
+        "voltage": "1.2-5.5V",
+        "voltage_min": 1.2,
+        "voltage_max": 5.5,
+        "current_ma": 50.0,
+        "io_voltage": "1.2-5.5V",
+        "pinout": {
+          "LV": "low-voltage reference",
+          "HV": "high-voltage reference",
+          "GND": "ground",
+          "LV_IN": "low-voltage side input",
+          "LV_OUT": "low-voltage side output",
+          "HV_IN": "high-voltage side input",
+          "HV_OUT": "high-voltage side output"
+        },
+        "package": "SOIC-20",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "nexar",
+        "confidence": 0.95
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478944Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_txs0108e_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "flyback_d1",
+      "name": "1N4007 Rectifier Diode",
+      "status": "functional",
+      "confidence": 0.99,
+      "source": "vault",
+      "specs": {
+        "voltage": "1000V reverse",
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": 1000.0,
+        "io_voltage": null,
+        "pinout": {
+          "A": "anode",
+          "K": "cathode"
+        },
+        "package": "DO-41",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [
+          "1N4007"
+        ],
+        "source": "measured",
+        "confidence": 0.99
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478954Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_1n4007_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "r_led_01",
+      "name": "330Ω 1/4W Resistor",
+      "status": "functional",
+      "confidence": 1.0,
+      "source": "vault",
+      "specs": {
+        "voltage": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": null,
+        "io_voltage": null,
+        "pinout": null,
+        "package": "through-hole-axial",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "measured",
+        "confidence": 1.0,
+        "value": "330Ω"
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478960Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_r330_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "r_pull_dht",
+      "name": "10kΩ 1/4W Resistor",
+      "status": "functional",
+      "confidence": 1.0,
+      "source": "vault",
+      "specs": {
+        "voltage": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": null,
+        "io_voltage": null,
+        "pinout": null,
+        "package": "through-hole-axial",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "measured",
+        "confidence": 1.0,
+        "value": "10kΩ"
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478966Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_r10k_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "cap_01",
+      "name": "100nF Ceramic Capacitor",
+      "status": "functional",
+      "confidence": 1.0,
+      "source": "vault",
+      "specs": {
+        "voltage": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": null,
+        "io_voltage": null,
+        "pinout": null,
+        "package": "through-hole",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "measured",
+        "confidence": 1.0,
+        "value": "100nF"
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478973Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_cap100n_001",
+      "disposal_reason": null
+    },
+    {
+      "schema_version": "0.1.0",
+      "part_id": "cap_02",
+      "name": "100nF Ceramic Capacitor (spare)",
+      "status": "functional",
+      "confidence": 1.0,
+      "source": "vault",
+      "specs": {
+        "voltage": null,
+        "voltage_min": null,
+        "voltage_max": null,
+        "current_ma": null,
+        "io_voltage": null,
+        "pinout": null,
+        "package": "through-hole",
+        "dimensions_mm": null,
+        "datasheet_url": null,
+        "alternate_names": [],
+        "source": "measured",
+        "confidence": 1.0,
+        "value": "100nF"
+      },
+      "repair_note": null,
+      "detected_at": "2026-06-20T12:23:16.478979Z",
+      "photo_id": null,
+      "vault_entry_id": "vault_cap100n_002",
+      "disposal_reason": null
+    }
+  ]
+}

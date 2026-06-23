@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+*.swpruns/  
+datasets/  
+*.db  
+*.pt  
+server_*.txt  
+training_*.txt  
